@@ -12,28 +12,26 @@ import com.douzone.mvc.util.WebUtils;
 import com.douzone.mysite.repository.UserDao;
 import com.douzone.mysite.vo.UserVo;
 
-public class LoginAction implements Action {
+public class ModifyFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-	
-		UserVo authUser = new UserDao().get(email, password);
-		
+		/* 접근제어(보안) */
+		UserVo authUser = null;
+		HttpSession session = request.getSession();
+		if(session != null) {
+			authUser = (UserVo)session.getAttribute("authuser");
+		}
 		if(authUser == null) {
-			/* 인증 실패  */
-			request.setAttribute("result", "fail");
-			WebUtils.forward(request, response, "/WEB-INF/views/user/loginform.jsp");
+			WebUtils.redirect(request, response, request.getContextPath());
 			return;
 		}
+		////////////////////////////////////////////
 		
-		/* 인증성공 -> 인증처리 */
-		HttpSession session = 
-			request.getSession(true);
-		session.setAttribute("authuser", authUser);
+		//UserVo vo = new UserDao().get(authUser.getNo());
+		//request.setAttribute("vo", vo);
 		
-		/* main redirect */
-		WebUtils.redirect(request, response, request.getContextPath());
+		WebUtils.forward(request, response, "/WEB-INF/views/user/modifyform.jsp");
 	}
+
 }
