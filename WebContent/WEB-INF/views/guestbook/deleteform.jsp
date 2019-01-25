@@ -24,7 +24,9 @@
 				<a href="">방명록 리스트</a>
 			</div>
 		</div>
-		<c:import url="/WEB-INF/views/includes/navigation.jsp"/>
+		<c:import url="/WEB-INF/views/includes/navigation.jsp">
+			<c:param name="menu" value="guestbook"/>
+		</c:import>
 		<c:import url="/WEB-INF/views/includes/footer.jsp"/>
 	</div>
 </body>

@@ -22,7 +22,7 @@ div#header	li a 			{ color:#4F4F4F; font-weight:bold; margin-left:10px; text-dec
 div#navigation ul			{ width:118px; margin-top:1px }
 div#navigation li			{ width:118px; background-color:#E9E9E9; border:1px solid #DADADA; margin-top:-1px }
 div#navigation li a			{ display:block; color:#4F4F4F; width:98px; font-weight:bold; padding:5px 10px; font-size:1.1em }
-div#navigation li.selected	{ background:#E0E0E0 }
+div#navigation li.selected	{ background:#C0C0C0 }
 div#navigation li a:link	{ color:#4F4F4F; text-decoration:none; }
 div#navigation li a:hover	{ color:#4F4F4F; text-decoration:none; }
 div#navigation li a:visited	{ color:#4F4F4F; text-decoration:none; }
