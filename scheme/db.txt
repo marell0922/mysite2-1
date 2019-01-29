@@ -1,0 +1,3 @@
+user: webdb
+passwd: webdb
+db: webdb

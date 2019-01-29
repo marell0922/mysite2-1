@@ -37,7 +37,7 @@
 					</tr>
 					<tr>
 						<td>2</td>
-						<td><a href="">두 번째 글입니다.</a></td>
+						<td style="padding-left:${30*2 }px" ><img src="/mysite2/assets/images/reply.png"/><a href="">첫 번째 글입니다.</a></td>
 						<td>안대혁</td>
 						<td>3</td>
 						<td>2015-10-02 12:04:12</td>
@@ -45,7 +45,7 @@
 					</tr>
 					<tr>
 						<td>1</td>
-						<td style="padding-left:${15*vo.depth }px"><img src="/mysite2/assets/images/reply.png"/><a href="">첫 번째 글입니다.</a></td>
+						<td style="padding-left:${30*1 }px" ><img src="/mysite2/assets/images/reply.png"/><a href="">첫 번째 글입니다.</a></td>
 						<td>안대혁</td>
 						<td>3</td>
 						<td>2015-09-25 07:24:32</td>
