@@ -24,7 +24,9 @@ public class UserActionFactory extends AbstractActionFactory {
 			action = new LogoutAction();
 		} else if("modifyform".equals(actionName)) {
 			action = new ModifyFormAction();
-		} else {
+		} else if("modify".equals(actionName)){
+			action=new ModifyAction();
+		}else {
 			action = new IndexAction();
 		}
 		
